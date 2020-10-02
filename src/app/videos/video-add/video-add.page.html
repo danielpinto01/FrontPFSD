@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar informacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-card class="ion-margin-vertical">
+        <ion-card-header>
+          Complete los siguientes campos
+        </ion-card-header>
+        <ion-card-content>
+          <ion-input type="text" placeholder="Escriba su correo" #email></ion-input>
+          <input type="file" id="video" #video>
+          <ion-button color="secondary" (click)="saveNewVideo(email,video)"> 
+            <ion-icon name="enter-outline" slot="end"></ion-icon> Agregar
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
